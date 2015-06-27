@@ -35,7 +35,7 @@ app.post('/*', function(req, res, next) {
     var name = data.name;
     var url = data.shortUrl;
 
-    res.status(200).send('Card "' + name + '" created here: <' + url + '>');
+    res.status(200).send('Bug "' + name + '" signalé ici : <' + url + '>');
   });
 });
 
