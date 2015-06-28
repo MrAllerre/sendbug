@@ -35,7 +35,7 @@ app.post('/*', function(req, res, next) {
     var name = data.name;
     var url = data.shortUrl;
 
-    res.status(200).send('OK ! "' + name + '" Lien du signalement : <' + url + '>');
+    res.status(200).send('Bug "' + name + '" signal\351 ici : <' + url + '>');
   });
 });
 
