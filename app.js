@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 function postToTrello(listId, command, text, cb) {
   if (text == undefined || text == null || text == "") {
-    throw new Error('Format is ' + command + ' name | description(optional)');
+    throw new Error('Le format est ' + command + ' nom | description (optionelle)');
   }
 
   var name_and_desc = text.split('|');
@@ -45,7 +45,7 @@ app.get('/', function (req, res) { res.status(200).send('SupportKit.io loves Sla
 // error handler
 app.use(function (err, req, res, next) {
   console.error(err.stack);
-  res.status(400).send('Error: ' + err.message);
+  res.status(400).send('Erreur : ' + err.message);
 });
 
 app.listen(port, function () {
